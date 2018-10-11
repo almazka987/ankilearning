@@ -1,0 +1,132 @@
+
+.alio-column {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.alio-flip-box {
+    position: relative;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden
+}
+
+.alio-flip-box .flip-box-inner-wrapper {
+    position: relative;
+    margin-bottom: 15px;
+    -webkit-transform: translateZ(0)
+}
+
+.alio-flip-box .flip-box-back, .alio-flip-box .flip-box-front {
+    -webkit-perspective: 600px;
+    perspective: 600px;
+    padding: 27px 20px;
+    text-align: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    -webkit-transition: all .4s cubic-bezier(.2,.85,.4,1.275)!important;
+    -o-transition: all .4s cubic-bezier(.2,.85,.4,1.275)!important;
+    transition: all .4s cubic-bezier(.2,.85,.4,1.275)!important
+}
+
+.alio-flip-box .flip-box-front {
+    background-color: #6c757d;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+    z-index: 10
+}
+
+.alio-flip-box .flip-box-back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: auto;
+    width: 100%;
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    z-index: -1;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.alio-flip-box .flip-box-back .alio-button {
+    display: table;
+    margin: 20px auto 0
+}
+
+.alio-flip-box.hover .flip-box-back {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+    z-index: 1
+}
+
+.alio-flip-box.hover .flip-box-front {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    z-index: -1
+}
+
+.alio-flip-box.hover .flip-box-front .flip-box-grafix i:before {
+    display: none
+}
+
+.alio-flip-box .flip-box-grafix {
+    display: table;
+    margin: 0 auto 10px
+}
+
+.alio-flip-box .flip-box-image {
+    table-layout: fixed;
+    width: 100%
+}
+
+.alio-flip-box .flip-box-circle {
+    height: 64px;
+    width: 64px;
+    border: 1px solid;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box
+}
+
+.alio-flip-box .flip-box-circle i {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 24px
+}
+
+.alio-flip-box .flip-box-no-circle i {
+    font-size: 60px
+}
+
+.alio-flip-box .flip-box-heading {
+    margin-top: 0;
+    margin-bottom: 9px;
+    padding-top: 0
+}
+
+.alio-flip-box .flip-box-heading.without-text {
+    margin-bottom: 0
+}
+
+.alio-flip-box .flip-box-heading-back {
+    margin-bottom: 9px;
+    margin-top: 0;
+    font-size: 14px;
+    text-transform: uppercase
+}
+
+.alio-flip-box .finished-animating {
+    -webkit-transition: none!important;
+    -o-transition: none!important;
+    transition: none!important;
+    -webkit-animation: none!important;
+    animation: none!important
+}
