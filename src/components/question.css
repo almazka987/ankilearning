@@ -20,6 +20,9 @@
 }
 
 .alio-flip-box .flip-box-back, .alio-flip-box .flip-box-front {
+    min-height: 350px;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
     -webkit-perspective: 600px;
     perspective: 600px;
     padding: 27px 20px;
@@ -33,16 +36,20 @@
     transition: all .4s cubic-bezier(.2,.85,.4,1.275)!important
 }
 
+.answer-holder {
+    overflow-y: scroll;
+    height: 252px;
+}
+
 .alio-flip-box .flip-box-front {
     background-color: #6c757d;
-    border: 1px solid rgba(0, 0, 0, 0.125);
-    border-radius: 0.25rem;
     -webkit-transform: rotateY(0);
     transform: rotateY(0);
     z-index: 10
 }
 
 .alio-flip-box .flip-box-back {
+    background-color: #17a2b8;
     position: absolute;
     left: 0;
     top: 0;
